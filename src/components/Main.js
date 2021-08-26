@@ -4,7 +4,7 @@ import Sidebar from './Sidebar'
 
 const Main = () => {
     return (
-        <div className="main flex flex-row bg-pink-50 h-screen">
+        <div className="main flex flex-row h-screen">
             {/* sidebar */}
             <Sidebar />
             {/* main chatroom */}

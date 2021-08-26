@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
     return (
-        <header className="flex flex-row items-center justify-between bg-dark-purple pr-4 py-1.5">
+        <header className="flex flex-row items-center justify-between bg-dark-purple pr-4 py-1.5 border-b border-light-purple">
             <div className="md:w-1/5 flex justify-end pr-5 pl-4">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -11,10 +11,12 @@ module.exports = {
       },
       backgroundColor: {
         "dark-purple": "#350D36",
-        "light-purple": "#644565"
+        "light-purple": "#644565",
+        "side-purple": "#3F0E40"
       },
       borderColor: {
         "dark-purple": "#350D36",
+        "light-purple": "#644565",
       },
       borderWidth: {
        '3': '3px',
@@ -28,5 +30,5 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 }

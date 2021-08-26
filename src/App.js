@@ -1,9 +1,13 @@
-import './App.css';
+import Header from './components/Header';
+import Main from './components/Main';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-center py-4 text-2xl font-bold ">Hello React Folks</h1>
+    <div className="flex flex-col overflow-hidden h-screen">
+      {/* Header */}
+      <Header />
+      {/* Main */}
+      <Main />
     </div>
   );
 }

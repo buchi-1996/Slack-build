@@ -9,4 +9,9 @@
     body {
         @apply font-lato
     }
+
+    .scroll {
+        color: green;
+    }
 }
+

@@ -3,7 +3,7 @@ import Main from './components/Main';
 
 function App() {
   return (
-    <div className="flex flex-col overflow-hidden h-screen">
+    <div className="flex flex-col h-screen">
       {/* Header */}
       <Header />
       {/* Main */}

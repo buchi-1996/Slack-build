@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Chat from './Chat'
 import Sidebar from './Sidebar'
 
 const Main = () => {
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(null);
+    useEffect(() => {
+        window.addEventListener('resize', ()=> {
+            window.innerWidth < 520 ? setIsDrawerOpen(false) : setIsDrawerOpen(true)
+            setIsMobile(false) 
+        })
+    }, [])
+
+    const clearOverlay = () => {
+        setIsDrawerOpen(false);
+        setIsMobile(false)
+    }
+
     return (
-        <div className="main flex flex-row h-screen">
+        <div className="main flex flex-row h-screen relative overflow-hidden">
+            {isMobile ? (<div onClick={clearOverlay} className="absolute sm:relative sm:hidden w-full h-full" />) : '' }
             {/* sidebar */}
-            <Sidebar />
+            <Sidebar isDrawerOpen={isDrawerOpen} />
             {/* main chatroom */}
-            <Chat />
+            <Chat isMobile={isMobile} setIsMobile={setIsMobile} isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
         </div>
     )
 }

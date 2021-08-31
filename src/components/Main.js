@@ -5,12 +5,17 @@ import Sidebar from './Sidebar'
 const Main = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(null);
-    useEffect(() => {
-        window.addEventListener('resize', ()=> {
-            window.innerWidth < 520 ? setIsDrawerOpen(false) : setIsDrawerOpen(true)
-            setIsMobile(false) 
-        })
-    }, [])
+    // useEffect(() => {
+    //     window.addEventListener('resize', ()=> {
+    //         window.innerWidth < 520 ? setIsDrawerOpen(false) : setIsDrawerOpen(true);
+            
+    //         setIsMobile(false) 
+
+    //     })
+    //     return window.removeEventListener('resize', () => {
+    //         window.innerWidth < 520 ? setIsDrawerOpen(false) : setIsDrawerOpen(true);
+    //     })
+    // }, [])
 
     const clearOverlay = () => {
         setIsDrawerOpen(false);

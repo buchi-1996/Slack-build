@@ -9,7 +9,7 @@ const Chat = ({ isDrawerOpen, setIsDrawerOpen, isMobile, setIsMobile }) => {
                 <div className="flex flex-row items-center">
                     <span onClick={() => { setIsDrawerOpen(!isDrawerOpen); setIsMobile(true) }} className={`${isDrawerOpen ? 'hidden' : 'block sm:hidden'} mr-4 hover:bg-gray-100 rounded-md p-1`}>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                         </svg>
                     </span>
                     <button className="flex items-center space-x-2 hover:bg-gray-100 rounded-md font-semibold py-1 px-1">

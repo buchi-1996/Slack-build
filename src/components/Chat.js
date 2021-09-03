@@ -1,9 +1,12 @@
 import React from 'react'
+import Modal from './Modal';
+import UserModal from './UserModal';
 
-const Chat = ({ isDrawerOpen, setIsDrawerOpen, isMobile, setIsMobile }) => {
+const Chat = ({isModal, setIsModal, isDrawerOpen, setIsDrawerOpen, isMobile, setIsMobile }) => {
 
     return (
         <div className="flex-1 h-full flex flex-col">
+            {isModal && (<Modal Template={UserModal} setIsModal={setIsModal} heading="Andre Nonso" />)}
             {/* Chat Header  */}
             <div className="flex flex-row items-center justify-between  px-4 h-12 py-6 border-b">
                 <div className="flex flex-row items-center">
@@ -12,7 +15,7 @@ const Chat = ({ isDrawerOpen, setIsDrawerOpen, isMobile, setIsMobile }) => {
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                         </svg>
                     </span>
-                    <button className="flex items-center space-x-2 hover:bg-gray-100 rounded-md font-semibold py-1 px-1">
+                    <button onClick={() => setIsModal(!isModal)} className="flex items-center space-x-2 hover:bg-gray-100 rounded-md font-semibold py-1 px-1">
                         <div className="relative">
                             <img src="./assets/slack-avatar.png" alt="" className="rounded object-contain w-6 h-6 flex-none" />
                             <div className="absolute right-0 bottom-0 transform translate-y-1.5 translate-x-1.5 rounded-full border-3 border-white">

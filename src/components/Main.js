@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Chat from './Chat'
 import Sidebar from './Sidebar'
 
-const Main = () => {
+const Main = ({isModal, setIsModal}) => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(null);
     // useEffect(() => {
@@ -28,7 +28,7 @@ const Main = () => {
             {/* sidebar */}
             <Sidebar isDrawerOpen={isDrawerOpen} />
             {/* main chatroom */}
-            <Chat isMobile={isMobile} setIsMobile={setIsMobile} isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
+            <Chat isModal={isModal} setIsModal={setIsModal} isMobile={isMobile} setIsMobile={setIsMobile} isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
         </div>
     )
 }

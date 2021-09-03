@@ -3,8 +3,11 @@ import SidebarAccordion from './SidebarAccordion';
 
 const Sidebar = ({isDrawerOpen}) => {
     console.log(isDrawerOpen);
+
+    
+
     return (
-            <div style={{ minWidth: 230 }} className={` ${!isDrawerOpen ? '-translate-x-full sm:translate-x-0 absolute sm:relative duration-500 transition-all' : `translate-x-0 ${isDrawerOpen ? 'absolute sm:relative duration-200 transition-all' : 'relative' }`} flex flex-col min-h-full h-64 md:justify-between w-1/5 border-r bg-side-purple z-50  transform`}>
+            <div style={{ minWidth: 230 }} className={` ${!isDrawerOpen ? '-translate-x-full sm:translate-x-0 absolute sm:relative duration-500 transition-all' : `translate-x-0 ${isDrawerOpen ? 'absolute sm:relative duration-200 transition-all' : 'relative' }`} flex flex-col min-h-full md:justify-between w-1/5 border-r bg-side-purple z-50  transform`}>
             <div className="flex flex-row items-center px-4 py-2 h-12 border-b border-light-purple">
                 <h1 className="truncate text-xl font-bold flex-1 text-white">Hiltop Web Solutions</h1>
                 <div className="flex flex-row items-center space-x-2">
@@ -20,7 +23,7 @@ const Sidebar = ({isDrawerOpen}) => {
                     </span>
                 </div>
             </div>
-            <div className="pt-4 pb-10 overflow-auto flex-1">
+            <div className="sidebar-scroll pt-4 pb-10 overflow-auto flex-1">
                 {[
                     {
                         sidebarOption: 'Threads', num: '', icon: (<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

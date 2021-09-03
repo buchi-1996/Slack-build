@@ -10,8 +10,23 @@
         @apply font-lato
     }
 
-    .scroll {
-        color: green;
+    .sidebar-scroll::-webkit-scrollbar{
+        display: none;
+        width: 8px;
+        background: transparent;
+        padding: 0 20px
+    }
+
+    .sidebar-scroll:hover::-webkit-scrollbar{
+        display: block;
+        transition: all .50s ease;
+    }
+
+    .sidebar-scroll::-webkit-scrollbar-thumb{
+        width: 4px;
+        height: 20px;
+        @apply bg-light-purple;
+        border-radius: 45px;
     }
 }
 
